@@ -1,0 +1,365 @@
+/* =========================================================
+   DESAIN MODERN - DESA LUBUK PUNGGUK
+   ========================================================= */
+
+/* Import Font Modern & Rapi dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f5f9; /* Warna latar belakang abu-abu terang yang soft */
+    color: #334155;
+    line-height: 1.6;
+}
+
+/* Header & Navigasi Universal */
+/* Header & Navigasi Universal */
+header {
+    background: linear-gradient(135deg, #15803d 0%, #166534 100%);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.logo h2 {
+    margin: 0;
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Style dasar menu navigasi */
+nav a {
+    color: #bbf7d0;
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 8px 18px;
+    border-radius: 20px;
+    /* Transisi halus saat kursor diarahkan */
+    transition: all 0.3s ease; 
+    position: relative;
+}
+
+/* EFEK HOVER: Saat kursor diarahkan ke menu (Home, Profil, Layanan, dll) */
+nav a:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2); /* Latar belakang putih transparan */
+    transform: translateY(-2px);                  /* Efek terangkat sedikit ke atas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);  /* Bayangan lembut di bawah menu */
+}
+
+/* Tampilan untuk menu yang sedang AKTIF (Halaman yang dibuka) */
+nav a.active {
+    color: #166534;
+    background-color: #ffffff;                    /* Latar belakang putih solid */
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Bagian Logo + Teks Desa */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Jarak antara gambar logo dan teks */
+}
+
+.logo img {
+    height: 50px; /* Ukuran tinggi logo */
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-text h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+/* Menghapus garis hijau default h2 khusus untuk teks logo */
+.logo-text h2::after {
+    display: none;
+}
+
+.logo-text p {
+    margin: 2px 0 0 0;
+    font-size: 0.85rem;
+    color: #e2e8f0;
+    font-weight: 400;
+}
+/* Layout Konten Utama */
+.container {
+    max-width: 1050px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    background: #ffffff;
+    padding: 32px;
+    margin-bottom: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e2e8f0;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Garis aksen kecil di bawah judul */
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background-color: #22c55e;
+    border-radius: 2px;
+}
+
+/* =========================================================
+   3. PERBAIKAN KHUSUS HALAMAN LAYANAN DESA
+   ========================================================= */
+
+/* Banner Informasi Jam Kerja */
+.banner-layanan {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    border: 1px solid #bbf7d0;
+}
+
+.banner-layanan h2 {
+    color: #166534;
+}
+
+.jam-operasional {
+    background-color: #ffffff;
+    padding: 14px 20px;
+    border-radius: 12px;
+    margin-top: 15px;
+    display: inline-block;
+    border: 1px solid #86efac;
+    box-shadow: 0 2px 8px rgba(34, 197, 94, 0.08);
+}
+
+.jam-operasional p {
+    margin: 2px 0;
+    color: #15803d;
+    font-size: 0.95rem;
+}
+
+/* Grid Kartu Layanan (Membuat Kartu Terlihat Elegan) */
+.grid-layanan {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.card-layanan {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Akses garis atas saat kartu di-hover */
+.card-layanan::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #22c55e;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card-layanan:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    border-color: #cbd5e1;
+}
+
+.card-layanan:hover::before {
+    opacity: 1;
+}
+
+.icon-layanan {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+    display: inline-block;
+    background: #f0fdf4;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.card-layanan h3 {
+    margin: 0 0 10px 0;
+    color: #166534;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.deskripsi-layanan {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.card-layanan strong {
+    color: #334155;
+    font-size: 0.9rem;
+}
+
+.card-layanan ul {
+    margin: 10px 0 0 0;
+    padding-left: 18px;
+    font-size: 0.88rem;
+    color: #475569;
+}
+
+.card-layanan li {
+    margin-bottom: 6px;
+}
+
+/* Alur Prosedur / Langkah-Langkah */
+.aluran-langkah {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.langkah {
+    background: #f8fafc;
+    border-radius: 14px;
+    padding: 24px 18px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+}
+
+.langkah:hover {
+    background: #ffffff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.nomor-langkah {
+    width: 46px;
+    height: 46px;
+    background: linear-gradient(135deg, #22c55e, #15803d);
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px auto;
+    box-shadow: 0 4px 10px rgba(34, 197, 94, 0.3);
+}
+
+.langkah h4 {
+    margin: 0 0 8px 0;
+    color: #0f172a;
+    font-size: 1.05rem;
+}
+
+.langkah p {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin: 0;
+}
+
+/* Tombol WhatsApp Bantuan Modern */
+.bantuan-section {
+    text-align: center;
+    background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+}
+
+.btn-wa {
+    display: inline-block;
+    background-color: #25d366;
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 30px;
+    margin-top: 15px;
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
+    transition: all 0.2s ease;
+}
+
+.btn-wa:hover {
+    background-color: #1eb954;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(37, 211, 102, 0.45);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #166534;
+    color: white;
+    margin-top: 40px;
+}
+
+/* Styling Tombol Back to Top */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background-color: white;
+    color: #1b7a43;
+    cursor: pointer;
+    padding: 12px 18px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+#backToTop:hover {
+    background-color: white;
+    transform: translateY(-3px);
+}
+
+html {
+    scroll-behavior: smooth;
+}

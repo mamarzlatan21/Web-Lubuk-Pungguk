@@ -1,0 +1,673 @@
+/* =========================================================
+   DESAIN MODERN UNIVERSAL - DESA LUBUK PUNGGUK
+   ========================================================= */
+
+/* Import Font Modern 'Plus Jakarta Sans' dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f5f9; /* Background soft abu-abu terang */
+    color: #334155;
+    line-height: 1.6;
+}
+
+/* Header & Navigasi Universal (Sama Konsisten di Semua Halaman) */
+/* Header & Navigasi Universal */
+header {
+    background: linear-gradient(135deg, #15803d 0%, #166534 100%);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.logo h2 {
+    margin: 0;
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Style dasar menu navigasi */
+nav a {
+    color: #bbf7d0;
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 8px 18px;
+    border-radius: 20px;
+    /* Transisi halus saat kursor diarahkan */
+    transition: all 0.3s ease; 
+    position: relative;
+}
+
+/* EFEK HOVER: Saat kursor diarahkan ke menu (Home, Profil, Layanan, dll) */
+nav a:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2); /* Latar belakang putih transparan */
+    transform: translateY(-2px);                  /* Efek terangkat sedikit ke atas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);  /* Bayangan lembut di bawah menu */
+}
+
+/* Tampilan untuk menu yang sedang AKTIF (Halaman yang dibuka) */
+nav a.active {
+    color: #166534;
+    background-color: #ffffff;                    /* Latar belakang putih solid */
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Bagian Logo + Teks Desa */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Jarak antara gambar logo dan teks */
+}
+
+.logo img {
+    height: 50px; /* Ukuran tinggi logo */
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-text h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+/* Menghapus garis hijau default h2 khusus untuk teks logo */
+.logo-text h2::after {
+    display: none;
+}
+
+.logo-text p {
+    margin: 2px 0 0 0;
+    font-size: 0.85rem;
+    color: #e2e8f0;
+    font-weight: 400;
+}
+/* Layout Konten Utama */
+.container {
+    max-width: 1050px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    background: #ffffff;
+    padding: 32px;
+    margin-bottom: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e2e8f0;
+}
+
+h2 {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Akses garis hijau kecil di bawah setiap judul H2 */
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background-color: #22c55e;
+    border-radius: 2px;
+}
+
+/* =========================================================
+   PERBAIKAN CSS KHUSUS HALAMAN PROFIL DESA
+   ========================================================= */
+
+/* Box Visi Desa */
+.box-visi {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    border-left: 5px solid #22c55e;
+    padding: 20px 24px;
+    border-radius: 0 12px 12px 0;
+    margin-bottom: 25px;
+}
+
+.box-visi h3, .box-misi h3 {
+    margin-top: 0;
+    color: #166534;
+    font-size: 1.2rem;
+}
+
+.visi-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-style: italic;
+    color: #15803d;
+    margin: 8px 0 0 0;
+}
+
+/* List Misi Desa */
+.box-misi ol {
+    padding-left: 20px;
+    margin: 10px 0 0 0;
+}
+
+.box-misi li {
+    margin-bottom: 8px;
+    color: #475569;
+}
+
+/* Structure Kartu Perangkat Desa Horizontal */
+.grid-perangkat {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 25px;
+}
+
+.card-perangkat {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 16px 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    transition: all 0.25 ease;
+}
+
+.card-perangkat:hover {
+    transform: translateX(6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    border-color: #cbd5e1;
+}
+
+/* Penanda Kartu Kepala Desa */
+.card-perangkat.kades {
+    border: 2px solid #22c55e;
+    background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+}
+
+/* =========================================================
+   STYLING BAGAN ORGANOGRAM / STRUKTUR POHON
+   ========================================================= */
+
+.organogram-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    padding: 20px 0;
+}
+
+.tree {
+    display: flex;
+    justify-content: center;
+}
+
+.tree ul {
+    padding-top: 20px;
+    position: relative;
+    transition: all 0.5s;
+    display: flex;
+    justify-content: center;
+}
+
+.tree li {
+    float: left;
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 20px 10px 0 10px;
+    transition: all 0.5s;
+}
+
+/* Garis penghubung vertikal dan horizontal */
+.tree li::before, .tree li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    border-top: 2px solid #cbd5e1;
+    width: 50%;
+    height: 20px;
+}
+
+.tree li::after {
+    right: auto;
+    left: 50%;
+    border-left: 2px solid #cbd5e1;
+}
+
+/* Menghapus garis berlebih pada node paling luar */
+.tree li:only-child::after, .tree li:only-child::before {
+    display: none;
+}
+
+.tree li:only-child {
+    padding-top: 0;
+}
+
+.tree li:first-child::before, .tree li:last-child::after {
+    border: none;
+}
+
+.tree li:last-child::before {
+    border-right: 2px solid #cbd5e1;
+    border-radius: 0 5px 0 0;
+}
+
+.tree li:first-child::after {
+    border-radius: 5px 0 0 0;
+}
+
+.tree ul ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 2px solid #cbd5e1;
+    width: 0;
+    height: 20px;
+}
+
+/* Kartu Node Perangkat */
+.card-node {
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    min-width: 220px;
+    transition: all 0.3s ease;
+}
+
+.card-node:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================================
+   STYLING BAGAN ORGANIGRAM DESA (FOTO LEBIH BESAR)
+   ========================================================= */
+
+.subtitle-bagan {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+.organigram-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+/* Kartu Organigram General (Divertikalkan agar foto fleksibel & lega) */
+.card-organigram {
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column; /* Mengubah posisi foto ke atas & teks ke bawah */
+    align-items: center;
+    text-align: center;
+    width: 200px; /* Ukuran kartu disesuaikan */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card-organigram:hover {
+    transform: translateY(-4px);
+}
+
+/* Ukuran Foto diperbesar dari 50px menjadi 100px - 120px */
+.card-organigram .foto-box {
+    width: 110px;
+    height: 125px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background-color: #cbd5e1;
+    margin-bottom: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.card-organigram .foto-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-organigram .info-box h4 {
+    font-size: 0.98rem;
+    color: #0f172a;
+    margin-bottom: 4px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.card-organigram .info-box .jabatan {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Warna Khusus Hirarki & Penyesuaian Ukuran Kartu Utama */
+.card-organigram.kades {
+    border-color: #16a34a;
+    background-color: #f0fdf4;
+    width: 230px; /* Kepala Desa dibuat sedikit lebih besar */
+}
+.card-organigram.kades .foto-box {
+    width: 130px;
+    height: 145px;
+}
+.card-organigram.kades .jabatan { color: #15803d; }
+
+.card-organigram.bpd {
+    border: 2px dashed #0284c7;
+    background-color: #f0f9ff;
+    width: 210px;
+}
+.card-organigram.bpd .jabatan { color: #0369a1; }
+
+.card-organigram.sekdes {
+    border-color: #2563eb;
+    background-color: #eff6ff;
+    width: 210px;
+}
+.card-organigram.sekdes .jabatan { color: #1d4ed8; }
+
+.card-organigram.kaur {
+    border-color: #d97706;
+}
+.card-organigram.kaur .jabatan { color: #b45309; }
+
+.card-organigram.kadus {
+    border-color: #64748b;
+    width: 185px;
+}
+.card-organigram.kadus .foto-box {
+    width: 95px;
+    height: 110px;
+}
+.card-organigram.kadus .jabatan { color: #475569; }
+
+/* Garis-Garis Penghubung Bagan */
+.line-vertical {
+    width: 2px;
+    height: 25px;
+    background-color: #cbd5e1;
+    margin: 6px 0;
+}
+
+.level-top {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+}
+
+.garis-koordinasi-bpd {
+    width: 40px;
+    height: 2px;
+    border-top: 2px dashed #0284c7;
+}
+
+.group-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #64748b;
+    margin: 20px 0 12px 0;
+    background: #e2e8f0;
+    padding: 4px 14px;
+    border-radius: 12px;
+}
+
+/* Layout Baris */
+.level-kaur {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.level-kadus {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    max-width: 1000px;
+}
+
+/* Responsif Layar HP */
+@media (max-width: 768px) {
+    .level-top {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .garis-koordinasi-bpd {
+        width: 2px;
+        height: 20px;
+    }
+    .card-organigram {
+        width: 100% !important;
+        max-width: 260px;
+    }
+}
+
+/* Geografis & Peta Desa Lubuk Pungguk */
+.geografis-box {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.info-geografis {
+    flex: 1;
+    min-width: 260px;
+}
+
+.info-geografis ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.info-geografis li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #e2e8f0;
+    color: #475569;
+    font-size: 0.95rem;
+}
+
+.info-geografis strong {
+    color: #0f172a;
+}
+
+.peta-box {
+    flex: 1;
+    min-width: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================================
+   STYLE HALAMAN LAYANAN DESA
+   ========================================================= */
+.banner-layanan {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    border: 1px solid #bbf7d0;
+}
+
+.jam-operasional {
+    background-color: #ffffff;
+    padding: 14px 20px;
+    border-radius: 12px;
+    margin-top: 15px;
+    display: inline-block;
+    border: 1px solid #86efac;
+    box-shadow: 0 2px 8px rgba(34, 197, 94, 0.08);
+}
+
+.jam-operasional p {
+    margin: 2px 0;
+    color: #15803d;
+    font-size: 0.95rem;
+}
+
+.grid-layanan {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.card-layanan {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-layanan:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.icon-layanan {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+    display: inline-block;
+    background: #f0fdf4;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.card-layanan h3 {
+    margin: 0 0 10px 0;
+    color: #166534;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.aluran-langkah {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.langkah {
+    background: #f8fafc;
+    border-radius: 14px;
+    padding: 24px 18px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+}
+
+.nomor-langkah {
+    width: 46px;
+    height: 46px;
+    background: linear-gradient(135deg, #22c55e, #15803d);
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px auto;
+}
+
+.bantuan-section {
+    text-align: center;
+    background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+}
+
+.btn-wa {
+    display: inline-block;
+    background-color: #25d366;
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 30px;
+    margin-top: 15px;
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #166534;
+    color: white;
+    margin-top: 40px;
+}
+
+/* Styling Tombol Back to Top */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background-color: white;
+    color: #1b7a43;
+    cursor: pointer;
+    padding: 12px 18px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+#backToTop:hover {
+    background-color: white;
+    transform: translateY(-3px);
+}
+
+html {
+    scroll-behavior: smooth;
+}

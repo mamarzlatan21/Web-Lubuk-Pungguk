@@ -1,0 +1,372 @@
+/* Tampilan Dasar */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header & Navigasi Universal */
+/* Header & Navigasi Universal */
+header {
+    background: linear-gradient(135deg, #15803d 0%, #166534 100%);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.logo h2 {
+    margin: 0;
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Style dasar menu navigasi */
+nav a {
+    color: #bbf7d0;
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 8px 18px;
+    border-radius: 20px;
+    /* Transisi halus saat kursor diarahkan */
+    transition: all 0.3s ease; 
+    position: relative;
+}
+
+/* EFEK HOVER: Saat kursor diarahkan ke menu (Home, Profil, Layanan, dll) */
+nav a:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2); /* Latar belakang putih transparan */
+    transform: translateY(-2px);                  /* Efek terangkat sedikit ke atas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);  /* Bayangan lembut di bawah menu */
+}
+
+/* Tampilan untuk menu yang sedang AKTIF (Halaman yang dibuka) */
+nav a.active {
+    color: #166534;
+    background-color: #ffffff;                    /* Latar belakang putih solid */
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Bagian Logo + Teks Desa */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Jarak antara gambar logo dan teks */
+}
+
+.logo img {
+    height: 50px; /* Ukuran tinggi logo */
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-text h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+/* Menghapus garis hijau default h2 khusus untuk teks logo */
+.logo-text h2::after {
+    display: none;
+}
+
+.logo-text p {
+    margin: 2px 0 0 0;
+    font-size: 0.85rem;
+    color: #e2e8f0;
+    font-weight: 400;
+}
+/* Layout Konten Utama */
+.container {
+    max-width: 1050px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    background: #ffffff;
+    padding: 32px;
+    margin-bottom: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e2e8f0;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Akses garis hijau kecil di bawah setiap judul H2 */
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background-color: #22c55e;
+    border-radius: 2px;
+}
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url(perangkat\ desa\ 2.jpeg) center/cover no-repeat;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.btn-utama {
+    display: inline-block;
+    background-color: #2e7d32;
+    color: white;
+    padding: 10px 24px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.btn-utama:hover {
+    background-color: #388e3c;
+}
+
+/* Layout Konten */
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    background: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Sambutan Kades */
+.sambutan-box {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* --- Bagian Sambutan Kades di style.css --- */
+
+/* Gaya untuk wadah fotonya */
+.foto-kades {
+    flex-shrink: 0; /* Agar foto tidak gepeng saat layar menyempit */
+    display: flex;
+    justify-content: center;
+}
+
+/* Gaya baru untuk mengatur ukuran foto yang sebenarnya */
+.img-kades {
+    /* --- REKOMENDASI UKURAN --- */
+    width: 180px;      /* Lebar foto (misalnya 180 pixel) */
+    height: 240px;     /* Tinggi foto (misalnya 240 pixel) */
+    /* -------------------------- */
+    
+    object-fit: cover; /* Agar foto terpotong rapi jika aslinya tidak pas */
+    object-position: center top; /* Memastikan wajah tetap terlihat di tengah atas */
+    border-radius: 10px; /* Sudut foto agak melengkung */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Efek bayangan halus */
+    border: 3px solid white; /* Bingkai putih tebal agar terlihat elegan */
+}
+
+.teks-sambutan {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Container Cards */
+.cards {
+    display: flex;
+    gap: 24px;
+    align-items: stretch; /* Memastikan semua kartu memiliki tinggi yang sama */
+    flex-wrap: wrap;
+}
+
+/* Gaya Seragam untuk Semua Kartu */
+.card-ringkasan {
+    flex: 1;
+    min-width: 280px;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px 24px;
+    border: 1px solid #eef2f5;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-ringkasan:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Container Icon Atas */
+.card-icon-box {
+    margin-bottom: 16px;
+}
+
+.card-ringkasan .icon {
+    font-size: 2.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    background-color: #f0fdf4;
+    border-radius: 16px;
+}
+
+/* Judul Kartu */
+.card-ringkasan h3 {
+    color: #166534;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+}
+
+/* Deskripsi Kartu */
+.card-desc {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+}
+
+/* Grid Komoditas Potensi Desa */
+.potensi-list {
+    list-style: none;
+    padding: 0;
+    margin: auto 0 0 0; /* Otomatis ke bawah */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    width: 100%;
+}
+
+.potensi-list li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 10px 8px;
+    border-radius: 10px;
+    font-weight: 600;
+    color: #1e293b;
+    font-size: 0.9rem;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.potensi-list li:hover {
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+}
+
+.potensi-list .item-icon {
+    font-size: 1.1rem;
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+    }
+}
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #166534;
+    color: white;
+    margin-top: 40px;
+}
+
+/* Styling Tombol Back to Top */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background-color: white;
+    color: #1b7a43;
+    cursor: pointer;
+    padding: 12px 18px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+#backToTop:hover {
+    background-color: white;
+    transform: translateY(-3px);
+}
+
+html {
+    scroll-behavior: smooth;
+}
