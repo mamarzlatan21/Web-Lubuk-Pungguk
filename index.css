@@ -289,6 +289,24 @@ h2 {
     margin: 0 0 20px 0;
 }
 
+/* Style Gambar Icon Utama di Atas */
+.icon-img-main {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 14px;
+    background-color: #f0fdf4;
+    padding: 8px; /* Berikan padding jika gambarnya berbentuk icon transparan (PNG) */
+}
+
+/* Style Gambar Icon Kecil di List Komoditas */
+.potensi-list .item-img {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    border-radius: 4px; /* Gunakan 50% jika ingin gambarnya bulat melingkar */
+    flex-shrink: 0;
+}
 /* Grid Komoditas Potensi Desa */
 .potensi-list {
     list-style: none;
