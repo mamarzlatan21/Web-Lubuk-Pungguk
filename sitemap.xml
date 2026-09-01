@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
-    <loc>https://mamarzlatan21.github.io/LubukPungguk.github.io/</loc>
+    <loc>https://mamarzlatan21.github.io/Web-Lubuk-Pungguk/</loc>
     <priority>1.00</priority>
   </url>
+
   <url>
-    <loc>https://mamarzlatan21.github.io/LubukPungguk.github.io/profile.html</loc>
+    <loc>https://mamarzlatan21.github.io/Web-Lubuk-Pungguk/profile.html</loc>
     <priority>0.80</priority>
   </url>
+
   <url>
-    <loc>https://mamarzlatan21.github.io/LubukPungguk.github.io/Layanan.html</loc>
+    <loc>https://mamarzlatan21.github.io/Web-Lubuk-Pungguk/Layanan.html</loc>
     <priority>0.80</priority>
   </url>
+
   <url>
-    <loc>https://mamarzlatan21.github.io/LubukPungguk.github.io/berita.html</loc>
+    <loc>https://mamarzlatan21.github.io/Web-Lubuk-Pungguk/berita.html</loc>
     <priority>0.80</priority>
   </url>
+
 </urlset>
