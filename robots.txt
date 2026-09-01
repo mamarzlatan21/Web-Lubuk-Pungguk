@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mamarzlatan21.github.io/LubukPungguk.github.io/sitemap.xml
